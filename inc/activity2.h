@@ -1,7 +1,9 @@
 #ifndef _ACTIVITY2_h_
 #define _ACTIVITY2_h_
-
-
+/**
+ * @brief 
+ * 
+ */
 
 /**
  * @brief Function to initailaise the ADC register 

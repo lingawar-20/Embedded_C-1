@@ -6,7 +6,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul 28 21:51:57 2021
+# Make data base, printed on Thu Jul 29 20:18:57 2021
 
 # Variables
 
@@ -27,8 +27,7 @@ VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
-@D = $(patsubst %/,%,$(patsu 
-bst %\,%,$(dir $@)))
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
 HOMEDRIVE = C:
 # automatic
@@ -51,8 +50,8 @@ ONEDRIVE = C:\Users\karan\OneDrive
 PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# environment
-FPS_BROWSER_USER_PROFILE_STRING = Default
+# makefile (from 'Makefile', line 18)
+FixPath = $(subst /,\,$1)
 # environment
 TMP = C:\Users\karan\AppData\Local\Temp
 # environment
@@ -62,7 +61,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-2f55fc90-797d-4821-9e95-f326222dbf27-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-37ce431d-700d-47d9-a37c-5c6b9627f443-sock
 # environment
 VSCODE_CWD = C:\Users\karan\AppData\Local\Programs\Microsoft VS Code
 # default
@@ -89,10 +88,8 @@ ELECTRON_RUN_AS_NODE = 1
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync load
 # automatic
 %F = $(notdir $%)
-# makefile (from 'Makefile', line 18)
-FixPath = $(subst /,\,$1)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12624_BOYOZJMEDVTBSOAJ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_6504_XXSUUABBQIOGYQEV
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -216,13 +213,11 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
-# environment
-VSCODE_PID = 12624
+VSCODE_PID = 6504
 # environment
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-TOLSUP5U
 # variable set hash-table stats:
-# Load=105/1024=10%, Rehash=0, Collisions=16/135=12%
+# Load=103/1024=10%, Rehash=0, Collisions=15/139=11%
 
 # Pattern-specific Variable Values
 
@@ -230,9 +225,9 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-TOLSUP5U
 
 # Directories
 
-# . (key c:/Embedded_C, mtime 1627487901): 11 files, no impossibilities.
+# . (key c:/Embedded_C, mtime 1627489775): 13 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -244,11 +239,28 @@ all: Build
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
 #  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := Build
+# automatic
+# | := 
+# automatic
+# < := Build
+# automatic
+# ^ := Build
+# automatic
+# ? := Build
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+# Load=8/32=25%, Rehash=0, Collisions=3/18=17%
 #  recipe to execute (from 'Makefile', line 39):
 	$(CC) -g -Wall -Os -mmcu=atmega328  $(INC) $(SRC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).elf)
 
@@ -290,28 +302,9 @@ src/activity3.c:
 
 Build:
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
-#  File does not exist.
+#  Last modified 2021-07-29 14:01:55
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := Build
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := 
-# automatic
-# | := 
-# automatic
-# < := 
-# automatic
-# ^ := 
-# automatic
-# ? := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
+#  Successfully updated.
 #  recipe to execute (from 'Makefile', line 43):
 	mkdir $(BUILD_DIR)
 
@@ -366,12 +359,12 @@ doc:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 23 / storage = 196 B / avg = 8 B
-# current buf: size = 8162 B / used = 196 B / count = 23 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 24 / storage = 204 B / avg = 8 B
+# current buf: size = 8162 B / used = 204 B / count = 24 / avg = 8 B
 
-# strcache performance: lookups = 41 / hit rate = 43%
+# strcache performance: lookups = 43 / hit rate = 44%
 # hash-table stats:
-# Load=23/8192=0%, Rehash=0, Collisions=1/41=2%
-# Finished Make data base on Wed Jul 28 21:51:57 2021
+# Load=24/8192=0%, Rehash=0, Collisions=1/43=2%
+# Finished Make data base on Thu Jul 29 20:18:57 2021
 
  

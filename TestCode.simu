@@ -1,0 +1,7 @@
+<circuit reactStep="50" type="simulide_0.4" Speed_sps="1000000" Speed_per="100" animate="0" Simu_Step_nS="1000" noLinAcc="5">
+
+Unique  Id: atmega328-1: 
+Circuit Id: atmega328-1
+<item objectName="atmega328-1" circPos="0,0" Init_gdb="false" Mhz="16" eeprom="" hflip="1" rotation="0" labelx="0" valLabRot="0" circRot="7.0634204867845552e-304" itemtype="AVR" boardPos="-1e+06,-1e+06" valLabelx="0" varList="" Show_id="true" boardRot="-1000000" id="atmega328-1" mainComp="false" valLabely="0" Logic_Symbol="false" x="-492" labely="-20" y="-356" vflip="1" Program="" Auto_Load="false" labelrot="0"/>
+ 
+</circuit>

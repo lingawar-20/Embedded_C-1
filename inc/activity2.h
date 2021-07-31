@@ -1,20 +1,25 @@
-#ifndef _ACTIVITY2_h_
-#define _ACTIVITY2_h_
 /**
+ * @file activity2.h
+ * @author your name (you@domain.com)
  * @brief 
+ * @version 0.1
+ * @date 2021-07-31
+ * 
+ * @copyright Copyright (c) 2021
  * 
  */
+ #define __ADC_H__
+
+#include<avr/io.h>
 
 /**
- * @brief Function to initailaise the ADC register 
- * 
+ * @brief Function to initialize the registers required to read data from the ADC
  */
-void Init_adc();
-/**
- * @brief Function to select the required chanel and read the analog data
- * 
- * @param channel
- * @return uint16_t 
- */
-uint16_t Get_ADC(uint8_t channel);
-#endif
+ void initADC();
+
+ /**
+  * @brief Function to read data from the ADC
+  */
+uint16_t readADC(uint8_t ch);
+
+ #endif

@@ -2,31 +2,34 @@
 #include "activity2.h"
 #include "activity3.h"
 #include "activity4.h"
+#include "proj_config.h"
 
-int main()
+int main(void)
 {
-    uint16_t temp=0;
-    //unsigned int duty;
+    initPort();
+    initADC();
+    initPWM();
+    initUSART(103);
 
-    perpheral_io(); // initialising all peripherals and pin configurations
-    Init_adc(); // initialising ADC registers
-    set_PWM(); // setting pwm output
-    UART_init(); //initialising UART registers
     while(1)
     {
-         if((!(BUTTON_STATUS & (1<<BUTTON_PIN))) && (!(HEATER_STATUS & (1<<HEATER_PIN))))// if both swithes are ON, LED will glow
-        {
-            LED_ON(); // turn ON led
-            temp=Get_ADC(0); // read temp value from channel 0
-            out_PWM(temp); 
-            //UART_READ(temp);
-            UART_WRITE(temp); // write the temperature data to the UART buffer
-        }
+        int systemStatus;
+        systemStatus = check();
         
-        else 
+        if(systemStatus)
         {
-           LED_OFF(); // turn off led if switch is not ON
+            char temperature;
+            uint16_t temp;
+
+            temp = readADC(5);
+            _delay_ms(200);
+            temperature = PWMGenerate(temp);
+            _delay_ms(200);
+            transmitCharUSART(temperature);
+        }
+        else
+        {
+            OCR1A = 0;
         }
     }
-    return 0;
 }

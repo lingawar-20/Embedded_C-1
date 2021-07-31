@@ -1,3 +1,6 @@
+#ifndef _ACTIVITY1_h_
+#define _ACTIVITY1_h_
+
 /**
  * @file activity1.h
  * @author your name (you@domain.com)
@@ -8,18 +11,39 @@
  * @copyright Copyright (c) 2021
  * 
  */
-#define __LED_H_
-
-#include "project_config.h"
 
 /**
- * @brief function to initilaize the LED port as output and the switches as input
+ * @brief MACROS for ports and pins
  */
- void initPort();
+#define LED_PORT (PORTB)
+#define LED_PIN (PB0)
+
+#define BUTTON_PORT (PORTC)
+#define BUTTON_PIN (PC0)
+#define BUTTON_STATUS (PINC)
+
+#define HEATER_PORT (PORTC)
+#define HEATER_PIN (PC1)
+#define HEATER_STATUS (PINC)
+/**
+ * Include files
+ */
+#include<avr/io.h>
 
 /**
- * @brief function to check the status of the switches and make the LED glow in 
+ * @brief function to inistialise the pins
+ * 
  */
-int check();
+void perpheral_io(void);
 
+/**
+ * @brief to switch on led
+ * 
+ */
+void LED_ON(void);
+/**
+ * @brief to switch off led
+ * 
+ */
+void LED_OFF(void);
 #endif

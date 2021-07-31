@@ -8,23 +8,22 @@
  * @copyright Copyright (c) 2021
  * 
  */
-#define __PWM_H__
+
+#ifndef _ACTIVITY3_h_
+#define _ACTIVITY3_h_
+
+#define PWM_PORT (PB1)
 
 #include<avr/io.h>
-#include "project_config.h"
-#include <util/delay.h>
-
 /**
- * @brief function that initilaizes the register values required for PWM
+ * @brief Function to initialise the PWM output
  * 
  */
- void initPWM();
-
+void set_PWM();
 /**
- * @brief function that generates the PWM wave and decides its duty cycle according to the temperature input
- * @param[in] temperature get the temperature value from the ADC
- * @param[out] int prints the integer value of the temperature 
+ * @brief 
+ * 
+ * @param ADC 
  */
-char PWMGenerate(uint16_t temp);
-
+char out_PWM(uint16_t val);
 #endif

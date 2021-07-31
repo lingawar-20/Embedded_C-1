@@ -1,41 +1,21 @@
 #include "activity1.h"
+#include "activity2.h"
+#include "activity3.h"
+#include "activity4.h"
 
-void initPort()
+void LED_ON()
 {
-     ///setting the pin C0 and C1 as input by clearing bit
-    SWITCH_REG &= ~(1<<HEAT_ON);
-    SWITCH_REG &= ~(1<<DRIVER_SEATED);
-
-    ///setting the pin B0 as output
-    LED_REG |= (1<<STATUS_LED);
+	LED_PORT |= (1<<LED_PIN);
 }
-
-int check()
+void LED_OFF()
 {
-    ///The integers that temporarily store the status of the input switches
-        volatile int switch1, switch2;
-        int flag = 0;
-        ///Storing the switch input in variables
-        switch1 = SENSOR_IP&(1<<HEAT_ON);
-        _delay_ms(100);
-        switch2 = SENSOR_IP&(1<<DRIVER_SEATED);
-        _delay_ms(100);
-        //checking if both the push button switches are switched on
-
-        if (switch1&&switch2)
-        {
-            ///LED is switched on if both switches are high
-            LED_OP |= (1<<STATUS_LED);
-            _delay_ms(1000);
-            flag = 1;
-        }
-        else
-        {
-            //LED is off otherwise
-            LED_OP &= ~(1<<STATUS_LED);
-            _delay_ms(1000);
-        }
-        if (flag==1)
-        return 1;
-        return 0;
+	LED_PORT &= ~(1<<LED_PIN);
+}
+void perpheral_io(void)
+{
+  DDRB |= (1<<LED_PIN);  // setting B port as output for led
+  DDRC &= ~(1<<HEATER_PIN); // setting C port as input for heater button
+  DDRC &= ~(1<<BUTTON_PIN); // setting C port as input to check the presence of a passenger
+  HEATER_PORT |= (1<<HEATER_PIN);
+  BUTTON_PORT |= (1<<BUTTON_PIN);
 }

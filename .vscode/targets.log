@@ -6,7 +6,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 31 09:37:55 2021
+# Make data base, printed on Sat Jul 31 20:45:13 2021
 
 # Variables
 
@@ -27,7 +27,8 @@ VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
-@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+@D = $(patsubst %/,%,$(patsu 
+bst %\,%,$(dir $@)))
 # environment
 HOMEDRIVE = C:
 # automatic
@@ -61,7 +62,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-fa535e23-47d7-4206-b504-65f304c3f5ba-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-58fe3346-9db5-4b06-90fd-46278cea91bc-sock
 # environment
 VSCODE_CWD = C:\Users\karan\AppData\Local\Programs\Microsoft VS Code
 # default
@@ -91,7 +92,7 @@ ELECTRON_RUN_AS_NODE = 1
 # makefile (from 'Makefile', line 18)
 FixPath = $(subst /,\,$1)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10972_CWXERIMSHXYMSHRA
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_7376_BMAMBSYDTMLOMJEJ
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -217,7 +218,7 @@ PROCESSOR_LEVEL = 6
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 10972
+VSCODE_PID = 7376
 # environment
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-TOLSUP5U
 # variable set hash-table stats:
@@ -229,9 +230,9 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-TOLSUP5U
 
 # Directories
 
-# . (key c:/Embedded_C, mtime 1627700762): 18 files, no impossibilities.
+# . (key c:/Embedded_C, mtime 1627744383): 16 files, no impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -306,7 +307,7 @@ src/activity3.c:
 
 Build:
 #  Implicit rule search has not been done.
-#  Last modified 2021-07-31 09:09:14
+#  Last modified 2021-07-31 20:16:08
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 43):
@@ -363,12 +364,12 @@ doc:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 29 / storage = 280 B / avg = 9 B
-# current buf: size = 8162 B / used = 280 B / count = 29 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 27 / storage = 250 B / avg = 9 B
+# current buf: size = 8162 B / used = 250 B / count = 27 / avg = 9 B
 
-# strcache performance: lookups = 48 / hit rate = 39%
+# strcache performance: lookups = 46 / hit rate = 41%
 # hash-table stats:
-# Load=29/8192=0%, Rehash=0, Collisions=1/48=2%
-# Finished Make data base on Sat Jul 31 09:37:55 2021
+# Load=27/8192=0%, Rehash=0, Collisions=1/46=2%
+# Finished Make data base on Sat Jul 31 20:45:13 2021
 
  

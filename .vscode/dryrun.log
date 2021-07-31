@@ -1,7 +1,6 @@
 make.exe --dry-run --always-make --keep-going --print-directory
 make.exe: Entering directory 'c:/Embedded_C'
 mkdir Build
- 
 avr-gcc.exe -g -Wall -Os -mmcu=atmega328  -I inc main.c src/activity1.c src/activity2.c src/activity3.c src/activity4.c  -o Build\Heater.elf
 make.exe: Leaving directory 'c:/Embedded_C'
  
